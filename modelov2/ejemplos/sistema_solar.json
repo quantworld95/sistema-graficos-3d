@@ -1,0 +1,95 @@
+{
+  "nombre": "Sistema Solar",
+  "descripcion": "Tierra orbitando el Sol con Luna orbitando la Tierra",
+  "partes": [
+    {
+      "nombre": "Sol",
+      "geometria": {
+        "tipo": "esfera",
+        "parametros": {
+          "radio": 1.0,
+          "segmentos": 12
+        }
+      },
+      "color": {
+        "r": 1.0,
+        "g": 0.8,
+        "b": 0.2
+      },
+      "animacion": {
+        "tipo": "rotacion",
+        "eje": "Y",
+        "velocidad": 0.5
+      }
+    },
+    {
+      "nombre": "Tierra",
+      "geometria": {
+        "tipo": "esfera",
+        "parametros": {
+          "radio": 0.4,
+          "segmentos": 10
+        }
+      },
+      "color": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.8
+      },
+      "animacion": {
+        "tipo": "orbita",
+        "eje": "Y",
+        "velocidad": 0.3,
+        "radio": 3.0,
+        "dependeDe": "Sol"
+      }
+    },
+    {
+      "nombre": "Luna",
+      "geometria": {
+        "tipo": "esfera",
+        "parametros": {
+          "radio": 0.15,
+          "segmentos": 8
+        }
+      },
+      "color": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+      },
+      "animacion": {
+        "tipo": "orbita",
+        "eje": "Y",
+        "velocidad": 1.5,
+        "radio": 0.8,
+        "dependeDe": "Tierra"
+      }
+    }
+  ],
+  "animacionGlobal": {
+    "tipo": "traslacion",
+    "eje": "Y",
+    "velocidad": 0.2,
+    "offset": {
+      "x": 1.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  "camara": {
+    "posicion": {
+      "x": 8.0,
+      "y": 6.0,
+      "z": 8.0
+    },
+    "objetivo": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "fov": 60.0,
+    "near": 0.1,
+    "far": 100.0
+  }
+}
